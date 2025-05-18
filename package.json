@@ -1,17 +1,12 @@
 {
-  "name": "repo-updater",
-  "version": "1.0.0",
   "type": "module",
-  "engines": {
-    "node": "=18.0.0"  
-  },
+  "engines": { "node": ">=18.0.0" },
   "scripts": {
     "start": "node cli.js update",
-    "build": "echo 'No build required' && exit 0"
+    "build": "echo 'No build needed'"
   },
   "dependencies": {
     "@octokit/rest": "^20.0.0",
-    "commander": "^11.0.0",
-    "dotenv": "^16.0.0"
+    "commander": "^11.0.0"
   }
 }
