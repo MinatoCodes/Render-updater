@@ -1,0 +1,6 @@
+echo '[
+  ".md",
+  ".txt",
+  "docs/",
+  "scripts/non-critical/"
+]' > allowed-patterns.json
