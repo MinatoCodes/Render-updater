@@ -1,5 +1,4 @@
-cat > cli.js <<'EOL'
-#!/usr/bin/env node
+
 const { program } = require('commander');
 const { updateFiles } = require('./commands');
 
@@ -14,4 +13,3 @@ program
   });
 
 program.parse();
-EOL
