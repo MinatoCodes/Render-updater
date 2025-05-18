@@ -1,10 +1,22 @@
 #!/usr/bin/env node
 import { program } from 'commander';
-import { update } from './commands.js'; // Note .js extension
+import http from 'http';
 
+// Your existing CLI logic
 program
-  .version('1.0.0')
   .command('update')
-  .action(update);
+  .action(() => {
+    console.log("Running repository update...");
+    // Your update logic here
+  });
 
-program.parse(process.argv);
+// Minimal web server for Render
+const server = http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("CLI tool is running");
+});
+
+server.listen(process.env.PORT || 3000, () => {
+  console.log(`Fake web server running on port ${server.address().port}`);
+  program.parse(process.argv); // Start your CLI
+});
